@@ -1,0 +1,42 @@
+div.container {
+	width: 900px;
+	margin: auto;
+	border: 1px #dddddd solid;
+}
+
+header {
+	padding: 10px 10px 0px 10px;
+	border-bottom: 1px #dddddd solid;
+	font-size: 20px;
+	text-align: right;
+	font-weight: bold;
+}
+
+main {
+	padding: 10px;
+}
+
+@media (max-width: 920px) {
+	div.container {
+		width: 100%;
+	}
+}
+
+@media (max-width: 768px) {
+	body {
+		margin: 0px;
+	}
+
+	div.container {
+		border: 0px;
+	}
+
+	header {
+		padding-top: 19px;
+	}
+
+	main {
+		padding-left: 19px;
+		padding-right: 19px;
+	}
+}

@@ -1,0 +1,11 @@
+{{#layout "app/views/layouts/layout.html" /}}
+<h1>Blog Posts:</h1>
+
+<h3><a href="/blog/post/1">{{model[0].title}}</a></h3>
+<p>{{model[0].date.toDateString()}}</p>
+<p>{{model[0].content}}</p>
+<h3><a href="/blog/post/2">{{model[1].title}}</a></h3>
+<p>{{model[1].date.toDateString()}}</p>
+<p>{{model[1].content}}</p>
+
+<p><a href="/">Go back home</a>.</p>

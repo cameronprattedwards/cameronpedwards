@@ -1,0 +1,10 @@
+{{#layout "app/views/layouts/layout.html" /}}
+
+<h2>{{title}}</h2>
+<p>{{date.toDateString()}}</p>
+<p>By: {{author.firstName}} {{author.lastName}}</p>
+<div class="content">
+	{{content}}
+</div>
+
+<p><a href="/blog">Go back to the blog</a>.</p>
