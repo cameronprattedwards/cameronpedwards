@@ -2,6 +2,7 @@ div.container {
 	width: 900px;
 	margin: auto;
 	border: 1px #dddddd solid;
+	overflow: hidden;
 }
 
 header {
@@ -14,6 +15,21 @@ header {
 
 main {
 	padding: 10px;
+	position: relative;
+	transition: left 1s, opacity 1s, -webkit-transform 1s;
+	left: 0%;
+	opacity: 1;
+	-webkit-transform: rotateY(0deg);
+}
+
+main.right {
+	left: 100%;
+	-webkit-transform: rotateY(180deg);
+}
+
+main.left {
+	left: -100%;
+	-webkit-transform: rotateY(180deg);
 }
 
 @media (max-width: 920px) {

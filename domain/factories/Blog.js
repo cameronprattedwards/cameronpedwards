@@ -1,4 +1,8 @@
 define(["genius/base/Class", "../Blog", "./Person"], function (Class, Blog, PersonFactory) {
+	Blog.prototype.myIndex = function () {
+		return all.indexOf(this);
+	}
+
 	var person = PersonFactory.dummy();
 
 	var blog1 = new Blog();
