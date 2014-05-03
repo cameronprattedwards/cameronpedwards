@@ -1,8 +1,6 @@
-define(["genius/base/Class"], function (Class) {
-	return Class.extend({
-		init: function () {
-			this.firstName = "";
-			this.lastName = "";
-		}
+define(["genius/mvc/model/resource/Resource", "genius/mvc/model/types/String"], function (Resource, String) {
+	return Resource.extend({
+		firstName: String(),
+		lastName: String()
 	});
 });

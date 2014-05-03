@@ -1,8 +1,8 @@
 {{#layout "app/views/layouts/layout.html" /}}
 
 <h2>{{title}}</h2>
-<p>{{date.toDateString()}}</p>
-<p>By: {{author.firstName}} {{author.lastName}}</p>
+<p>{{date}}</p>
+<p>By: {{author.get().firstName}} {{author.get().lastName}}</p>
 <div class="content">
 	{{content}}
 </div>

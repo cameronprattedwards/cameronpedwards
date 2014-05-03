@@ -9,7 +9,7 @@ requirejs.config({
 });
 
 requirejs(["genius/dependencies/server/real"], function () {
-	requirejs(["genius/Router", "app/controllers/IndexController", "app/controllers/BlogController"], function (Router, IndexController) {
+	requirejs(["app/config", "genius/Router", "app/controllers/IndexController", "app/controllers/BlogController"], function (config, Router, IndexController) {
 		Router.registerRoute("/:controller/:action/:id", {});
 
 		Router.registerRoute("/:controller/:action", {
