@@ -20,14 +20,21 @@ requirejs.config({
 	}
 });
 
-require(["angular", "angular-ui-router", "bootstrap"], function(angular) {
+require(["angular", "nav/nav", "angular-ui-router", "bootstrap"], function(angular, nav) {
 	angular.module("app", ["ui.router"])
+		.value("nav", nav)
+		.controller("navCtrl", function($scope) {
+			$scope.nav = nav;
+		})
 		.config(function($urlRouterProvider, $stateProvider) {
 			$urlRouterProvider.otherwise("/about");
 
 			$stateProvider.state("about", {
 				url: "/about",
-				templateUrl: "/about/about.html"
+				templateUrl: "/about/about.html",
+				controller: function() {
+					nav.activate("about");
+				}
 			});
 		});
 
