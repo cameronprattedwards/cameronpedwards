@@ -29,13 +29,21 @@ require(["angular", "nav/nav", "angular-ui-router", "bootstrap"], function(angul
 		.config(function($urlRouterProvider, $stateProvider) {
 			$urlRouterProvider.otherwise("/about");
 
-			$stateProvider.state("about", {
-				url: "/about",
-				templateUrl: "/about/about.html",
-				controller: function() {
-					nav.activate("about");
-				}
-			});
+			$stateProvider
+				.state("about", {
+					url: "/about",
+					templateUrl: "/about/about.html",
+					controller: function() {
+						nav.activate("about");
+					}
+				})
+				.state("resume", {
+					url: "/resume",
+					templateUrl: "/resume/resume.html",
+					controller: function() {
+						nav.activate("resume");
+					}
+				});
 		});
 
 	angular.bootstrap(document.body, ["app"]);
