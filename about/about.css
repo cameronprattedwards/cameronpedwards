@@ -13,3 +13,32 @@
 	text-align: center;
 	font-size: 32px;
 }
+
+.fa-chevron-up,
+.fa-chevron-down {
+	cursor: pointer;
+}
+
+.fa-chevron-up {
+	display: none;
+}
+
+.open .fa-chevron-up {
+	display: inline;
+}
+
+.open .fa-chevron-down {
+	display: none;
+}
+
+.accordion-body {
+	display: none;
+}
+
+.open .accordion-body {
+	display: block;
+}
+
+.resume-toggler {
+	cursor: pointer;
+}
