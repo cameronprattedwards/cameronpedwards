@@ -9,13 +9,12 @@ define([
 	], function (Resource, String, Date, Custom, Person, Number) {
 	return Resource.extend({
 		url: function () {
-			return "blogs";
+			return "posts";
 		},
 		uniqKey: "_id",
-		id: Number({ defaultTo: function () { return undefined; } }),
+		_id: Number({ defaultTo: function () { return undefined; } }),
 		title: String(),
 		content: String(),
-		date: Date(),
-		author: Custom(Person)
+		date: Date()
 	});
 });
